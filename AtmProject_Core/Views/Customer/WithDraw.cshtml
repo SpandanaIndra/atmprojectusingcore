@@ -1,0 +1,41 @@
+﻿@model AtmProject_Core.Models.Accounts
+<form asp-action="WithDraw" asp-controller="Customer" class="container" width="50%" align="center" style="max-width: 400px; margin: 0 auto;">
+    <h1>WithDraw Page </h1>
+    <br />
+    <table>
+        <tr>
+            <td>
+                <label asp-for="Balance" class="control-label">Enter WithDraw Amount</label>
+
+            </td>
+            <td>
+                <input asp-for="Balance" type="number" class="form-control" />
+
+
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <input type="submit" value="WithDraw" class="btn btn-primary" />
+
+            </td>
+        </tr>
+    </table>
+    <br />
+    <br />
+    <a asp-action="Transactions" asp-controller="Customer">BackToTransactions</a>
+</form>
+@if (ViewBag.msg != null)
+{
+    <h2 class="text-success">@ViewBag.msg</h2>
+    <h5>"Your Current Balance is "@ViewBag.bal</h5>
+
+}
+@if (ViewBag.res != null)
+{
+    <h2 class="text-danger">@ViewBag.res</h2>
+  
+}

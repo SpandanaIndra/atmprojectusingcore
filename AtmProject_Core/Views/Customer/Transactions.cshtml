@@ -1,0 +1,42 @@
+﻿@model AtmProject_Core.Models.Accounts
+
+<form asp-action="Transactions" asp-controller="Customer" class="container" width="50%" align="center" style="max-width: 600px; margin: 0 auto;">
+    <h2>Welcome @ViewBag.name</h2>
+
+    <br />
+    <table class="table">
+        <tr>
+            <td >
+                <a asp-action="Deposit" asp-controller="Customer">Deposit</a>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a asp-action="Withdraw" asp-controller="Customer">WithDraw</a>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a asp-action="CurrentBalance" asp-controller="Customer">CurrentBalance</a>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a asp-action="ChangePin" asp-controller="Customer">ChangePin</a>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a asp-action="MiniStatement" asp-controller="Customer">MiniStatement</a>
+
+            </td>
+        </tr>
+    </table>
+    <br />
+    <br />
+    <a asp-action="Login" asp-controller="Customer">BackToLogin</a>
+</form>

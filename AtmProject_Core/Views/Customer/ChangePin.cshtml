@@ -1,0 +1,70 @@
+﻿@model AtmProject_Core.Models.Accounts
+<form asp-action="ChangePin" asp-controller="Customer" class="container" width="50%" align="center" style="max-width: 400px; margin: 0 auto;">
+    <h1>Change Pin Form </h1>
+    <br />
+    <table class="table">
+        <tr>
+            <td>
+                <label asp-for="AccountsId" class="control-label">Account Number</label>
+
+            </td>
+            <td>
+                <input asp-for="AccountsId" class="form-control" />
+                <span asp-validation-for="AccountsId" class="text-danger"></span>
+
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="Pin" class="control-label">Current Pin</label>
+
+            </td>
+            <td>
+                <input asp-for="Pin" class="form-control" />
+                <span asp-validation-for="Pin" class="text-danger"></span>
+
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <label class="control-label">New Pin</label>
+
+            </td>
+            <td>
+                <input class="form-control" name="newpin" />
+                
+
+            </td>
+
+        </tr>
+        <tr><td></td><td></td></tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <input type="submit" value="Change" class="btn btn-primary" />
+
+            </td>
+        </tr>
+    </table>
+    <br />
+    <br />
+    <a asp-action="Login" asp-controller="Customer">BackToLogin</a>
+
+
+
+</form>
+@if (ViewBag.msg != null)
+{
+    <h2 class="text-success">@ViewBag.msg</h2>
+    <br />
+
+}

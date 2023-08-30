@@ -1,0 +1,12 @@
+﻿
+    <center>
+@if (ViewBag.bal != null)
+{
+    
+    <h2 class="text-success">Your Current Balance is @ViewBag.bal</h2>
+    <br />
+    <br />
+    <a asp-action="Transactions" asp-controller="Customer">BackToTransactions</a>
+
+}
+    </center>

@@ -1,0 +1,66 @@
+﻿@model AtmProject_Core.Models.Accounts
+
+<form asp-action="Index" asp-controller="Customer" class="container" width="50%" align="center" style="max-width: 400px; margin: 0 auto;">
+    <h1>Create New Account </h1>
+    <br />
+    <table>
+        <tr>
+            <td>
+                <label asp-for="CustomerName" class="control-label"></label>
+            </td>
+            <td>
+                <input asp-for="CustomerName" class="form-control" />
+
+                <span asp-validation-for="CustomerName" class="text-danger"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="MobileNumber"></label>
+            </td>
+            <td>
+                <input asp-for="MobileNumber" class="form-control" />
+           
+                <span asp-validation-for="MobileNumber" class="text-danger"></span>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="Balance">Minimum Balnce</label>
+            </td>
+            <td>
+                <input asp-for="Balance" class="form-control" value="500" readonly />
+           
+                <span asp-validation-for="Balance" class="text-danger"></span>
+
+            </td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Create Account" class="btn btn-primary" />
+            </td>
+            <td></td>
+        </tr>
+    </table>
+  
+
+<br />
+<br />
+<a asp-action="Login" asp-controller="Customer">Login</a>
+</form>
+
+
+@if (ViewBag.msg != null)
+{
+    <h2 class="text-success">@ViewBag.msg</h2>
+    <br />
+   <h5 >Your Account Number is:@Model.AccountsId</h5>
+    <h5 >Your Pin Number is:@Model.Pin</h5>
+
+}
+
+
+

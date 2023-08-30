@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AtmProject_Core.props" />
+</Project>
